@@ -1,0 +1,176 @@
+<div class="col-12">
+    <div>
+        <h3 class="titulos1">Otorgamiento Anticipado de Solicitud</h3>
+    </div>
+    
+    <br>
+
+    <form>
+
+        <div class="example-action-buttons">
+            <!-- <button mat-button (click)="accordion.openAll()">Expand All</button> -->
+            <!-- <button mat-button (click)="accordion.closeAll()">Collapse All</button> -->
+            <button type="button" class="btn btn-primary" (click)="accordion.openAll()">
+                Expand All
+            </button>
+            <button type="button" class="btn btn-primary" (click)="accordion.closeAll()">
+                Collapse All    
+            </button>            
+        </div>
+        <br>
+          <mat-accordion class="example-headers-align" multi>
+            
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Solicitud
+                        </mat-panel-title>
+                        <!-- <mat-panel-description>
+                            Type your name and age
+                        </mat-panel-description> -->
+                  </mat-expansion-panel-header>
+                   
+                    <div formGroupName="profileForm">
+                        <div class="row">
+                            <div class="col-4">
+                                <mat-label>Nro. Solicitud</mat-label>
+                                <input class="form-control" id="street" type="text" formControlName="street">
+                            </div>
+                            <div class="col-4">
+                                <mat-label>Año de solicitud</mat-label>
+                                <select required class="form-control">
+                                    <option *ngFor="let item of foods" [value]="item.value">{{item.viewValue}}</option>
+                                </select>
+                            </div>  
+                            <div class="col-4">
+                                <mat-checkbox class="example-margin" formControlName="OTA">Otorgamiento Anticipado</mat-checkbox>
+                                <button type="button" class="btn btn-primary">
+                                    Validar
+                                </button>
+                            </div>                            
+                            
+                            <div class="col-4">
+                                <mat-label>Fecha Solicitud</mat-label>
+                                <input class="form-control" id="street" type="text" formControlName="street">
+                            </div>
+                            <div class="col-4">
+                                <mat-label>Estatus</mat-label>
+                                <input class="form-control" id="street" type="text" formControlName="street">
+                            </div>
+                            <div class="col-4">
+                                <mat-label>Cirscunscrición Acuática</mat-label>
+                                <input class="form-control" id="street" type="text" formControlName="street">
+                            </div>
+                                                                      
+                        </div>
+                    </div> 
+                </mat-expansion-panel>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Datos del Solicitante
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                        Type your name and age
+                    </mat-panel-description> -->
+                
+                </mat-expansion-panel-header>
+                
+                <div formGroupName="profileForm">
+                    <div class="row">
+                        <div class="col-4">
+                            <mat-label>Cedula/RIF</mat-label>
+                            <input class="form-control" id="street" type="text" formControlName="street">
+                        </div>
+                        <div class="col-8">
+                            <mat-label>Nombre/Razón Social</mat-label>
+                            <input class="form-control" id="street" type="text" formControlName="street">
+                        </div>
+                    </div>
+                </div>  
+            </mat-expansion-panel>
+
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Datos del Armador
+                </mat-panel-title>
+                <!-- <mat-panel-description>
+                  Type the country name
+                </mat-panel-description> -->
+              </mat-expansion-panel-header>
+              <div formGroupName="profileForm">
+                <div class="row">
+                    <div class="col-4">
+                        <mat-label>Cedula/RIF</mat-label>
+                        <input class="form-control" id="street" type="text" formControlName="street">
+                    </div>
+                    <div class="col-8">
+                        <mat-label>Nombre/Razon Social</mat-label>
+                        <input class="form-control" id="street" type="text" formControlName="street">
+                    </div>
+                </div>
+            </div>         
+            </mat-expansion-panel>
+          
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                      Datos del Armador
+                  </mat-panel-title>
+                  <!-- <mat-panel-description>
+                    Type the country name
+                  </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <div formGroupName="profileForm">
+                  <div class="row">
+                      <div class="col-4">
+                          <mat-label>Cedula/RIF</mat-label>
+                          <input class="form-control" id="street" type="text" formControlName="street">
+                      </div>
+                      <div class="col-8">
+                          <mat-label>Nombre/Razon Social</mat-label>
+                          <input class="form-control" id="street" type="text" formControlName="street">
+                      </div>
+                  </div>
+              </div>         
+              </mat-expansion-panel>
+     
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                      Datos del Buque
+                  </mat-panel-title>
+                  <!-- <mat-panel-description>
+                    Type the country name
+                  </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <div formGroupName="profileForm">
+                  <div class="row">
+                      <div class="col-4">
+                          <mat-label>Matricula</mat-label>
+                          <input class="form-control" id="street" type="text" formControlName="street">
+                      </div>
+                      <div class="col-8">
+                          <mat-label>Nombre/Denominación</mat-label>
+                          <input class="form-control" id="street" type="text" formControlName="street">
+                      </div>
+                  </div>
+              </div>         
+              </mat-expansion-panel>
+                   
+          </mat-accordion>
+
+        <br><br>
+<!-- 
+      <button type="button" class="btn btn-outline-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+            Cancelar
+      </button> -->
+      <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+            Agregar
+      </button>
+
+    </form>
+</div>

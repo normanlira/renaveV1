@@ -1,0 +1,23 @@
+<div class="col-12">
+    <div class="row">
+        <div>
+            <h3 class="titulos1">Reportes</h3>
+        </div>
+        <br>
+        <div class="row">
+
+            <mat-list>
+                <!-- <div mat-subheader>Sub-Reports</div> -->
+                <!-- <li><a routerLink="AdvanceRequest">Solicitud Anticipada</a> -->
+                <mat-list-item *ngFor="let folder of folders" routerLink="AdvanceRequest">
+                <mat-icon mat-list-icon>assignment</mat-icon>
+                <div mat-line><a routerLink="#">{{folder.name}}</a></div>
+                <!-- <div mat-line> {{folder.updated | date}} </div> -->
+                </mat-list-item>
+                <!-- <mat-divider></mat-divider> -->
+            </mat-list>
+
+        </div>
+    </div>
+</div>
+

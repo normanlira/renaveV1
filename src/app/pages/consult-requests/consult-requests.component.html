@@ -1,0 +1,116 @@
+<div class="col-12">
+<div class="row">
+    <div>
+        <h3 class="titulos1">Consultar Solicitudes</h3>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-9">
+            <!-- <mat-label>A</mat-label> -->
+            <!-- <input style="margin-top: 1.84em;" class="form-control" id="street" type="text" formControlName="street"> -->
+            <!-- <mat-form-field appearance="standard"> -->
+              <!-- <mat-label>Filter</mat-label> -->
+              <input style="margin-top: 1.84em;" class="form-control" matInput (keyup)="applyFilter($event)" placeholder="Texto a buscar" #input>
+            <!-- </mat-form-field>             -->
+        </div>
+        <div class="col-2">
+            <mat-label>Año de solicitud</mat-label>
+            <select required class="form-control">
+                <option *ngFor="let item of years" [value]="item.value">{{item.viewValue}}</option>
+            </select>
+        </div> 
+        <div class="col-1">
+          <mat-label></mat-label>
+            <button style="margin-top: 1.84em;" type="button" class="btn btn-outline-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                Buscar
+          </button>            
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12" style="text-align: right;">
+      <span  class="">Se encontraron {{totalLength}} registros</span>
+    </div>
+  </div>
+  
+    
+  <div class="mat-elevation-z8" style="margin-top: 2em;">
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+      <!-- nro Column -->
+      <ng-container matColumnDef="nro">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header fxFlex="10px"> N° </th>
+        <td mat-cell *matCellDef="let row" fxFlex="10px"> {{row.id}} </td>
+      </ng-container>
+  
+      <!-- anio Column -->
+      <ng-container matColumnDef="anio">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Año </th>
+        <td mat-cell *matCellDef="let row"> {{row.anio}} </td>
+      </ng-container>
+  
+      <!-- actuacion Column -->
+      <ng-container matColumnDef="actuacion">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Actuación </th>
+        <td mat-cell *matCellDef="let row"> {{row.actuacion}} </td>
+      </ng-container>
+  
+      <!-- cedula Column -->
+      <ng-container matColumnDef="cedula">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Cedula </th>
+        <td mat-cell *matCellDef="let row"> {{row.cedula}} </td>
+      </ng-container>
+
+      <!-- solicitante Column -->
+      <ng-container matColumnDef="solicitante">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Solicitante </th>
+        <td mat-cell *matCellDef="let row"> {{row.solicitante}} </td>
+      </ng-container>
+      
+      <!-- Fruestatusit Column -->
+      <ng-container matColumnDef="estatus">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Estatus </th>
+        <td mat-cell *matCellDef="let row"> {{row.estatus}} </td>
+      </ng-container>
+      
+      <!-- fecha Column -->
+      <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha </th>
+        <td mat-cell *matCellDef="let row"> {{row.fecha}} </td>
+      </ng-container>
+      
+      <!-- buque Column -->
+      <ng-container matColumnDef="buque">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Buque </th>
+        <td mat-cell *matCellDef="let row"> {{row.buque}} </td>
+      </ng-container>
+      
+      <!-- matricula Column -->
+      <ng-container matColumnDef="matricula">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Matricula </th>
+        <td mat-cell *matCellDef="let row"> {{row.matricula}} </td>
+      </ng-container>    
+      
+      <!-- accion Column -->
+      <ng-container matColumnDef="accion">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Acciones </th>
+        <td mat-cell *matCellDef="let row"> 
+          <mat-icon aria-hidden="false" color="primary" (click)="changeIcon()">info</mat-icon>
+          <mat-icon aria-hidden="false" (click)="changeIcon()">library_books</mat-icon>
+        </td>
+        <!-- <td mat-cell *matCellDef="let row"> {{row.fruit}} </td> -->
+      </ng-container>         
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No hay datos que coincidan con el filtro "{{input.value}}"</td>
+      </tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[10, 25, 50, 100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+
+
+</div>

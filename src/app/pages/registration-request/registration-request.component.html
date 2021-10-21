@@ -1,0 +1,252 @@
+<div class="col-12">
+    <div>
+        <h3 class="titulos1">Solicitud de Registro</h3>
+    </div>
+    
+    <br>
+
+    <form >
+
+        <div class="example-action-buttons">
+            <!-- <button mat-button (click)="accordion.openAll()">Expand All</button> -->
+            <!-- <button mat-button (click)="accordion.closeAll()">Collapse All</button> -->
+            <button type="button" class="btn btn-primar y" (click)="accordion.openAll()">
+                Expand All
+            </button>
+            <button type="button" class="btn btn-primary" (click)="accordion.closeAll()">
+                Collapse All    
+            </button>            
+        </div>
+        <br>
+          <mat-accordion class="example-headers-align" multi>
+            
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Datos del Solicitante
+                        </mat-panel-title>
+                        <!-- <mat-panel-description>
+                            Type your name and age
+                        </mat-panel-description> -->
+                  </mat-expansion-panel-header>
+                   
+                    <div formGroupName="profileForm">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="form-group two-fields">
+                                    <label for="">Cedula/RIF</label>
+                                    <div class="input-group">
+                                        <select required class="form-control">
+                                            <option *ngFor="let item of nacionalidad" [value]="item.value">{{item.viewValue}}</option>
+                                        </select>
+                                        <input type="text" required class="form-control" placeholder="Numero">
+                                    </div>
+                                </div>                                
+                            </div>
+                            <div class="col-4">
+                                <mat-label>Nombre/Razón Social</mat-label>
+                                <input class="form-control" id="street" type="text" formControlName="street">
+                            </div>
+                            <div class="col-4">
+                                <mat-label>Telefono</mat-label>
+                                <input class="form-control" id="street" type="text" formControlName="street">
+                            </div>
+                            <div class="col-4">
+                                <mat-label>Fax</mat-label>
+                                <input class="form-control" id="street" type="text" formControlName="street">
+                            </div>
+                            <div class="col-4">
+                                <mat-label>Correo Electrónico</mat-label>
+                                <input class="form-control" id="street" type="text" formControlName="street">
+                            </div>
+                            <div class="col-4">
+                                <mat-label>Dirección</mat-label>
+                                <input class="form-control" id="street" type="text" formControlName="street">
+                            </div>
+                            <div class="col-4">
+                                <mat-label>Caracter con el que actua</mat-label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option *ngFor="let item of nacionalidad" [value]="item.value">{{item.viewValue}}</option>
+                                  </select>
+                                <!-- <mat-select name="food">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                                </mat-select> -->
+                            </div>                        
+                            <div class="col-4">
+                                <mat-label>Circunscripción Acustica</mat-label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option *ngFor="let item of nacionalidad" [value]="item.value">{{item.viewValue}}</option>
+                                  </select>
+                                <!-- <mat-select name="food">
+                                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option>
+                                </mat-select> -->
+                            </div>                                                
+                        </div>
+                    </div> 
+                </mat-expansion-panel>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Datos del Armador
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                        Type your name and age
+                    </mat-panel-description> -->
+                
+                </mat-expansion-panel-header>
+                
+                <div formGroupName="profileForm">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group two-fields">
+                                <label for="">Cedula/RIF</label>
+                                <div class="input-group">
+                                    <select required class="form-control">
+                                        <option *ngFor="let item of nacionalidad" [value]="item.value">{{item.viewValue}}</option>
+                                    </select>
+                                    <input type="text" required class="form-control" placeholder="Numero">
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="col-4">
+                            <mat-label>Nombre/Razón Social</mat-label>
+                            <input class="form-control" id="street" type="text" formControlName="street">
+                        </div>
+                        <div class="col-4">
+                            <mat-label>Telefono</mat-label>
+                            <input class="form-control" id="street" type="text" formControlName="street">
+                        </div>
+                        <div class="col-4">
+                            <mat-label>Fax</mat-label>
+                            <input class="form-control" id="street" type="text" formControlName="street">
+                        </div>
+                        <div class="col-4">
+                            <mat-label>Correo Electrónico</mat-label>
+                            <input class="form-control" id="street" type="text" formControlName="street">
+                        </div>
+                        <div class="col-4">
+                            <mat-label>Dirección</mat-label>
+                            <input class="form-control" id="street" type="text" formControlName="street">
+                        </div>
+                                               
+                    </div>
+                </div>  
+            </mat-expansion-panel>
+
+
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Datos del Buque
+                </mat-panel-title>
+                <!-- <mat-panel-description>
+                  Type the country name
+                </mat-panel-description> -->
+              </mat-expansion-panel-header>
+              <div formGroupName="profileForm">
+                <div class="row">
+                    <div class="col-7">
+                        <div class="form-group two-fields">
+                            <label for="">Matrícula</label>
+                            <div class="input-group">
+                                <select required class="form-control">
+                                    <option *ngFor="let item of nacionalidad" [value]="item.value">{{item.viewValue}}</option>
+                                </select>                                
+                                <select required class="form-control">
+                                    <option *ngFor="let item of nacionalidad" [value]="item.value">{{item.viewValue}}</option>
+                                </select>
+                                <input type="text" required class="form-control" placeholder="Numero">
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="col-5">
+                        <mat-label>Nombre/Deniminación</mat-label>
+                        <input class="form-control" id="street" type="text" formControlName="street">
+                    </div>
+                    <div class="col-4">
+                        <mat-label>UAB</mat-label>
+                        <input class="form-control" id="street" type="text" formControlName="street">
+                    </div>
+                    <div class="col-4">
+                        <mat-label>UAN</mat-label>
+                        <input class="form-control" id="street" type="text" formControlName="street">
+                    </div>
+                    <div class="col-4">
+                        <mat-label>M.M.S.I</mat-label>
+                        <input class="form-control" id="street" type="text" formControlName="street">
+                    </div>
+                    <div class="col-4">
+                        <mat-label>Distintivo de Llamada</mat-label>
+                        <input class="form-control" id="street" type="text" formControlName="street">
+                    </div>
+                    <div class="col-4">
+                        <mat-label>OMI</mat-label>
+                        <input class="form-control" id="street" type="text" formControlName="street">
+                    </div>                    
+                    <div class="col-4">
+                        <!-- <mat-label>OMI</mat-label> -->
+                        <mat-checkbox class="form-control" formControlName="OMI">Embarcación Pesquera</mat-checkbox>
+                    </div>                                            
+                </div>
+            </div>         
+            </mat-expansion-panel>
+          
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Otorgamiento Anticipado 
+                    </mat-panel-title>
+                    <!-- <mat-panel-description>
+                    </mat-panel-description> -->
+                </mat-expansion-panel-header>
+                <div>   
+                    <div class="col-12">
+                        <mat-checkbox class="example-margin" formControlName="OMI">Embarcación Pesquera</mat-checkbox>
+                    </div>   
+                </div>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Tipo de Solicitud
+                  </mat-panel-title>
+                  <!-- <mat-panel-description>
+                  </mat-panel-description> -->
+            </mat-expansion-panel-header>
+                <div class="row">   
+                    <div class="col-6" *ngFor="let item of tipoSolicitud">
+                        <mat-checkbox class="example-margin" formControlName="OMI"  [value]="item.value">{{item.viewValue}}</mat-checkbox>
+                    </div>
+                    <!-- <div class="col-6" *ngFor="let item of tipoSolicitud">
+                        <mat-checkbox class="example-margin" formControlName="OMI"  [value]="item.value">{{item.viewValue}}</mat-checkbox>
+                    </div> -->
+
+                    <!-- <div class="col-6">  a </div>
+                    <div class="col-6">  b </div> -->
+                </div>             
+                <!-- <mat-form-field appearance="fill">
+                  <mat-label>Date</mat-label>
+                  <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
+                </mat-form-field>
+                <mat-datepicker #picker></mat-datepicker> -->
+              </mat-expansion-panel>
+  
+          </mat-accordion>
+
+        <br><br>
+
+      <button type="button" class="btn btn-outline-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+            Cancelar
+      </button>
+      <button type="button" class="btn btn-primary button_agregar" data-toggle="button" aria-pressed="false" autocomplete="off">
+            Agregar
+      </button>
+
+    </form>
+</div>

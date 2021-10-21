@@ -1,0 +1,9 @@
+1.- Compila a la carpeta docs --> ng build --prod --output-path docs --base-href /Renave_V1/
+2.- Salvar y realizar un COMMIT
+3.- En repositorio del projecto ir a la secciond de CONFIGURACION, al apartado de GITHUB PAGES y seleciona DOCS
+    , salvar y verificar en la pagina que indican
+
+
+
+https://angular.io/guide/deployment
+
