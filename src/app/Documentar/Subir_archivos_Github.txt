@@ -1,0 +1,36 @@
+Cómo subir un proyecto local a GitHub desde Visual Studio Code:
+
+
+Microsoft tuvo la genial idea de integrar GitHub en su entorno de desarrollo para que los desarrolladores pudieran subir sus proyectos
+ sin problemas desde Visual Studio Code. Para ello hay que hacer lo siguiente: 
+ 
+
+Conéctate a GitHub desde Visual Studio Code yendo a la sección Team Explorer, luego haz clic en Administrador de conexiones y 
+después en Sign in. 
+
+Introduce tu usuario y contraseña de GitHub. 
+
+Si no lo has hecho antes, crea un repositorio para tu espacio de trabajo como viste previamente. 
+
+Añade tu proyecto haciendo doble clic en el repositorio. 
+
+Copia la solución del proyecto a la ruta del espacio de trabajo. 
+
+Haz clic en Cambios y verás una lista que muestra los archivos que se incluirán en el repositorio. 
+
+Añade una descripción sobre los cambios y haz clic en Commit All. 
+
+Sincroniza los cambios con GitHub para subir los archivos a dicha plataforma haciendo clic en Sync al aparecer el mensaje de 
+confirmación de Commit. 
+
+Presiona el botón Push para que inicie el proceso y verás un mensaje que confirma la publicación del proyecto en el repositorio. 
+
+Entra en la web de GitHub y accede a tu cuenta para verificar si el proyecto se ha subido correctamente. 
+
+ 
+
+Si has seguido estos pasos, tu proyecto se habrá subido correctamente a GitHub. 
+
+
+
+https://intelequia.com/blog/post/2121/c%C3%B3mo-subir-un-proyecto-a-un-repositorio-de-github
